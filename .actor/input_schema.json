@@ -16,7 +16,8 @@
             "editor": "select",
             "enum": ["opinions", "recap_dockets"],
             "enumTitles": ["Case opinions", "RECAP dockets (federal case filings)"],
-            "default": "opinions"
+            "default": "opinions",
+            "description": "Search case opinions, or RECAP federal case dockets/filings."
         },
         "court": {
             "title": "Court filter (optional)",
