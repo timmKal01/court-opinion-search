@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "court-opinion-search",
+    "title": "Court Opinion & Docket Search — CourtListener",
+    "description": "Search US federal court opinions and RECAP dockets by keyword, court, and filing date, via the official CourtListener API (Free Law Project).",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}

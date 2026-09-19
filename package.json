@@ -1,0 +1,15 @@
+{
+    "name": "court-opinion-search",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Search US federal court opinions and RECAP dockets by keyword, court, and date via the official CourtListener API.",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}

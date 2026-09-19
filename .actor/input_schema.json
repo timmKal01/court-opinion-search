@@ -1,0 +1,57 @@
+{
+    "title": "Court Opinion & Docket Search Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Keyword search",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Keyword(s) to search for, e.g. a case name, party, or legal topic.",
+            "prefill": "antitrust"
+        },
+        "resultType": {
+            "title": "Search type",
+            "type": "string",
+            "editor": "select",
+            "enum": ["opinions", "recap_dockets"],
+            "enumTitles": ["Case opinions", "RECAP dockets (federal case filings)"],
+            "default": "opinions"
+        },
+        "court": {
+            "title": "Court filter (optional)",
+            "type": "string",
+            "editor": "textfield",
+            "description": "CourtListener court ID, e.g. \"scotus\" (Supreme Court), \"ca9\" (9th Circuit). Leave blank for all courts."
+        },
+        "filedAfter": {
+            "title": "Filed after (optional)",
+            "type": "string",
+            "editor": "datepicker",
+            "description": "Only include results filed on or after this date (YYYY-MM-DD)."
+        },
+        "filedBefore": {
+            "title": "Filed before (optional)",
+            "type": "string",
+            "editor": "datepicker",
+            "description": "Only include results filed on or before this date (YYYY-MM-DD)."
+        },
+        "maxResults": {
+            "title": "Max results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Maximum number of results to return for this search.",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 200
+        },
+        "apiToken": {
+            "title": "CourtListener API token (optional)",
+            "type": "string",
+            "editor": "textfield",
+            "isSecret": true,
+            "description": "Optional. CourtListener works anonymously at low volume; supplying your own free CourtListener API token raises the rate limit. Get one at courtlistener.com/profile/api-token/."
+        }
+    },
+    "required": ["query"]
+}

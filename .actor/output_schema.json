@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of Court Opinion & Docket Search",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Court records",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}
