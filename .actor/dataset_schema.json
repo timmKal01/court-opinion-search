@@ -1,0 +1,73 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "resultType",
+                    "caseName",
+                    "court",
+                    "courtId",
+                    "docketNumber",
+                    "dateFiled",
+                    "citation",
+                    "citeCount",
+                    "judge",
+                    "downloadUrl",
+                    "absoluteUrl"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "resultType": {
+                        "label": "Result type",
+                        "format": "text"
+                    },
+                    "caseName": {
+                        "label": "Case name",
+                        "format": "text"
+                    },
+                    "court": {
+                        "label": "Court",
+                        "format": "text"
+                    },
+                    "courtId": {
+                        "label": "Court ID",
+                        "format": "text"
+                    },
+                    "docketNumber": {
+                        "label": "Docket number",
+                        "format": "text"
+                    },
+                    "dateFiled": {
+                        "label": "Date filed",
+                        "format": "text"
+                    },
+                    "citation": {
+                        "label": "Citation",
+                        "format": "array"
+                    },
+                    "citeCount": {
+                        "label": "Cite count",
+                        "format": "number"
+                    },
+                    "judge": {
+                        "label": "Judge",
+                        "format": "text"
+                    },
+                    "downloadUrl": {
+                        "label": "Download URL",
+                        "format": "link"
+                    },
+                    "absoluteUrl": {
+                        "label": "Absolute URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
