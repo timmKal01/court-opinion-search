@@ -63,5 +63,5 @@ Billed per **search**, not per result returned — a broad search that returns
 
 ## Related products
 
-- [Insider Trading Alert](https://github.com/timmKal01/insider-trading-alert) — SEC Form 4 executive buy/sell signals
-- [FINRA BrokerCheck Lookup](https://github.com/timmKal01/finra-brokercheck-lookup) — broker/firm registration and disciplinary history
+- [Insider Trading Tracker](https://apify.com/m_ctim/insider-trading-alert): SEC Form 4 executive buy/sell signals
+- [FINRA BrokerCheck Lookup](https://apify.com/m_ctim/finra-brokercheck-lookup): broker/firm registration and disciplinary history
