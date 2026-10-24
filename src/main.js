@@ -5,7 +5,7 @@ await Actor.init();
 
 const input = (await Actor.getInput()) ?? {};
 const {
-    query,
+    query: queryInput,
     resultType = 'opinions',
     court,
     filedAfter,
@@ -14,9 +14,9 @@ const {
     apiToken,
 } = input;
 
-if (!query) {
-    throw new Error('query is required.');
-}
+// An empty call (an AI agent calling with {}, or an empty API call) searches the input form's example instead of failing.
+const query = String(queryInput ?? '').trim() || 'antitrust';
+if (!String(queryInput ?? '').trim()) log.info('No query given, so searching the example "antitrust".');
 
 /** Must match the event name configured in this Actor's pay-per-event pricing on Apify. */
 const SEARCH_EVENT = 'court-search';
