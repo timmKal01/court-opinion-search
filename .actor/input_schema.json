@@ -7,9 +7,8 @@
             "title": "Keyword search",
             "type": "string",
             "editor": "textfield",
-            "description": "Keyword(s) to search for, e.g. a case name, party, or legal topic.",
-            "prefill": "antitrust",
-            "default": "antitrust"
+            "description": "Keyword(s) to search for, e.g. a case name, party, or legal topic. Leave it empty to search the example \"antitrust\"; every row then has exampleQuery: true.",
+            "prefill": "antitrust"
         },
         "resultType": {
             "title": "Search type",

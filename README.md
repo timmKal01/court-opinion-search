@@ -23,7 +23,7 @@ to check if a person or company has been party to federal litigation.
 
 | Field | Type | Description |
 |---|---|---|
-| `query` | string | Keyword search (case name, party, or legal topic). |
+| `query` | string | Keyword search (case name, party, or legal topic). Leave it empty to search the example `"antitrust"`; every row then has `exampleQuery: true`. |
 | `resultType` | string | `"opinions"` (case opinions) or `"recap_dockets"` (federal case filings). |
 | `court` | string | Optional CourtListener court ID, e.g. `"scotus"`, `"ca9"`. |
 | `filedAfter` / `filedBefore` | string | Optional date range filter (`YYYY-MM-DD`). |
@@ -34,6 +34,8 @@ to check if a person or company has been party to federal litigation.
 
 ```json
 {
+  "query": "antitrust",
+  "exampleQuery": false,
   "resultType": "opinion",
   "caseName": "Trump v. Slaughter",
   "court": "Supreme Court of the United States",

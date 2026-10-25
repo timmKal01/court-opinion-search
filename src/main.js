@@ -15,8 +15,11 @@ const {
 } = input;
 
 // An empty call (an AI agent calling with {}, or an empty API call) searches the input form's example instead of failing.
-const query = String(queryInput ?? '').trim() || 'antitrust';
-if (!String(queryInput ?? '').trim()) log.info('No query given, so searching the example "antitrust".');
+// `query` deliberately has no schema default (Apify would fill it in before the run starts), so the run can tell this
+// fallback apart from someone who searched "antitrust", and every row says which query it answers.
+const exampleQuery = !String(queryInput ?? '').trim();
+const query = exampleQuery ? 'antitrust' : String(queryInput).trim();
+if (exampleQuery) log.info('No query given, so searching the example "antitrust". Each row has exampleQuery: true.');
 
 /** Must match the event name configured in this Actor's pay-per-event pricing on Apify. */
 const SEARCH_EVENT = 'court-search';
@@ -29,7 +32,7 @@ try {
 }
 
 if (results.length > 0) {
-    await Actor.pushData(results);
+    await Actor.pushData(results.map((r) => ({ query, exampleQuery, ...r })));
 }
 await Actor.charge({ eventName: SEARCH_EVENT });
 

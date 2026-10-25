@@ -6,6 +6,7 @@
             "title": "Overview",
             "transformation": {
                 "fields": [
+                    "query",
                     "resultType",
                     "caseName",
                     "court",
@@ -22,6 +23,10 @@
             "display": {
                 "component": "table",
                 "properties": {
+                    "query": {
+                        "label": "Query",
+                        "format": "text"
+                    },
                     "resultType": {
                         "label": "Result type",
                         "format": "text"
